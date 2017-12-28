@@ -2,16 +2,16 @@
 
 {{#doc-content}}
 
-{{#paper-card}}
-  {{#paper-toolbar}}
-    {{#paper-toolbar-tools}}
+{{#o-card}}
+  {{#o-toolbar}}
+    {{#o-toolbar-tools}}
       <h2>Basic Usage</h2>
       <span class="flex"></span>
-      {{#paper-button onClick=(action "toggle" "showSourceCode") iconButton=true}}
-        {{paper-icon icon="code"}}
-      {{/paper-button}}
-    {{/paper-toolbar-tools}}
-  {{/paper-toolbar}}
+      {{#o-button onClick=(action "toggle" "showSourceCode") iconButton=true}}
+        {{o-icon icon="code"}}
+      {{/o-button}}
+    {{/o-toolbar-tools}}
+  {{/o-toolbar}}
 
   <div class="doc-code-example {{if showSourceCode 'is-visible'}}">
     {{code-snippet name="sidenav.hbs"}}
@@ -19,22 +19,22 @@
 
   <div class="doc-content-example">
     {{! BEGIN-SNIPPET sidenav }}
-    {{#paper-sidenav-container class="inner-sidenav"}}
+    {{#o-sidenav-container class="inner-sidenav"}}
 
-      {{#paper-sidenav
+      {{#o-sidenav
         class="md-whiteframe-z2"
         name="left"
         open=leftSideBarOpen
         onToggle=(action (mut leftSideBarOpen))}}
-        {{#paper-toolbar as |toolbar|}}
-          {{#paper-toolbar-tools}}Left Sidenav{{/paper-toolbar-tools}}
-        {{/paper-toolbar}}
-        {{#paper-content padding=true}}
+        {{#o-toolbar as |toolbar|}}
+          {{#o-toolbar-tools}}Left Sidenav{{/o-toolbar-tools}}
+        {{/o-toolbar}}
+        {{#o-content padding=true}}
           Çup?
-        {{/paper-content}}
-      {{/paper-sidenav}}
+        {{/o-content}}
+      {{/o-sidenav}}
 
-      {{#paper-card-content class="flex"}}
+      {{#o-card-content class="flex"}}
         <div class="layout-fill layout-align-start-center layout-column" style="height: 500px">
           <p>
             The left sidenav will "lock open" on a medium (>=960px wide) device.
@@ -47,52 +47,52 @@
             Right sidenav is <strong>{{if rightSideBarOpen "opened" "closed"}}</strong>.
           </p>
 
-          {{#paper-sidenav-toggle name="left" as |toggleAction|}}
-            {{#paper-button raised=true classNames="hide-gt-sm" onClick=(action toggleAction)}}
+          {{#o-sidenav-toggle name="left" as |toggleAction|}}
+            {{#o-button raised=true classNames="hide-gt-sm" onClick=(action toggleAction)}}
               Toggle left sidenav
-            {{/paper-button}}
-          {{/paper-sidenav-toggle}}
+            {{/o-button}}
+          {{/o-sidenav-toggle}}
 
-          {{#paper-sidenav-toggle name="right" as |toggleAction|}}
-            {{#paper-button raised=true onClick=(action toggleAction)}}
+          {{#o-sidenav-toggle name="right" as |toggleAction|}}
+            {{#o-button raised=true onClick=(action toggleAction)}}
               Toggle right sidenav
-            {{/paper-button}}
-          {{/paper-sidenav-toggle}}
+            {{/o-button}}
+          {{/o-sidenav-toggle}}
 
         </div>
-      {{/paper-card-content}}
+      {{/o-card-content}}
 
-      {{#paper-sidenav
+      {{#o-sidenav
         class="md-whiteframe-z2"
         name="right"
         position="right"
         open=rightSideBarOpen
         lockedOpen=false
         onToggle=(action (mut rightSideBarOpen))}}
-        {{#paper-toolbar as |toolbar|}}
-          {{#paper-toolbar-tools}}Right Sidenav{{/paper-toolbar-tools}}
-        {{/paper-toolbar}}
-        {{#paper-content padding=true}}
+        {{#o-toolbar as |toolbar|}}
+          {{#o-toolbar-tools}}Right Sidenav{{/o-toolbar-tools}}
+        {{/o-toolbar}}
+        {{#o-content padding=true}}
           Çup? I'm on the right side.
-        {{/paper-content}}
-      {{/paper-sidenav}}
+        {{/o-content}}
+      {{/o-sidenav}}
 
-    {{/paper-sidenav-container}}
+    {{/o-sidenav-container}}
     {{! END-SNIPPET sidenav }}
   </div>
 
-{{/paper-card}}
+{{/o-card}}
 
-{{#paper-card}}
-  {{#paper-toolbar}}
-    {{#paper-toolbar-tools}}
+{{#o-card}}
+  {{#o-toolbar}}
+    {{#o-toolbar-tools}}
       <h2>Persistent Sidenav</h2>
       <span class="flex"></span>
-      {{#paper-button onClick=(action "toggle" "persistentCode") iconButton=true}}
-        {{paper-icon "code"}}
-      {{/paper-button}}
-    {{/paper-toolbar-tools}}
-  {{/paper-toolbar}}
+      {{#o-button onClick=(action "toggle" "persistentCode") iconButton=true}}
+        {{o-icon "code"}}
+      {{/o-button}}
+    {{/o-toolbar-tools}}
+  {{/o-toolbar}}
 
   <div class="doc-code-example {{if persistentCode 'is-visible'}}">
     {{code-snippet name="sidenav.hbs"}}
@@ -100,23 +100,23 @@
 
   <div class="doc-content-example">
     {{! BEGIN-SNIPPET sidenav }}
-    {{#paper-sidenav-container class="inner-sidenav"}}
+    {{#o-sidenav-container class="inner-sidenav"}}
 
-      {{#paper-sidenav
+      {{#o-sidenav
         class="md-whiteframe-z2"
         name="left2"
         open=leftSideBarOpen2
         lockedOpen=leftSideBarLockedOpen
         onToggle=(action (mut leftSideBarOpen2))}}
-        {{#paper-toolbar as |toolbar|}}
-          {{#paper-toolbar-tools}}Left Sidenav{{/paper-toolbar-tools}}
-        {{/paper-toolbar}}
-        {{#paper-content padding=true}}
+        {{#o-toolbar as |toolbar|}}
+          {{#o-toolbar-tools}}Left Sidenav{{/o-toolbar-tools}}
+        {{/o-toolbar}}
+        {{#o-content padding=true}}
           Çup?
-        {{/paper-content}}
-      {{/paper-sidenav}}
+        {{/o-content}}
+      {{/o-sidenav}}
 
-      {{#paper-card-content class="flex"}}
+      {{#o-card-content class="flex"}}
         <div class="layout-fill layout-align-start-center layout-column" style="height: 500px">
           <p>
             Another way of using the sidenav is to toggle the <code>lockedOpen</code> state.
@@ -126,20 +126,20 @@
             Left sidenav is <strong>{{if leftSideBarLockedOpen "locked" "unlocked"}}</strong>.
           </p>
 
-          {{#paper-button raised=true onClick=(action "toggle" "leftSideBarLockedOpen")}}
+          {{#o-button raised=true onClick=(action "toggle" "leftSideBarLockedOpen")}}
             {{if leftSideBarLockedOpen "Unlock" "Lock"}} left sidenav
-          {{/paper-button}}
+          {{/o-button}}
 
         </div>
-      {{/paper-card-content}}
+      {{/o-card-content}}
 
-    {{/paper-sidenav-container}}
+    {{/o-sidenav-container}}
     {{! END-SNIPPET sidenav }}
   </div>
 
-{{/paper-card}}
+{{/o-card}}
 
-{{paper-api
+{{o-api
   (p-section
     (p-row "position" "`'left'` | `'right'`" "Pass in the string `'left'` or `'right'` to place the sidenav accordingly.")
     (p-row "lockedOpen" "`matchMedia` expression" "when this expression evauluates to true, the sidenav \"locks open\".")

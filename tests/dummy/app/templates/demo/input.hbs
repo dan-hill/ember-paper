@@ -3,23 +3,23 @@
 {{#doc-content}}
   {{! BEGIN-SNIPPET input.basic-usage}}
   <div class="layout layout-sm-column">
-    {{paper-input class="flex-30" label="Name" value=name onChange=(action (mut name))}}
-    {{paper-input class="flex-30" label="E-mail" type="email" value=email onChange=(action (mut email))}}
-    {{paper-input class="flex-40" label="Password" type="password" value=password onChange=(action (mut password))}}
+    {{o-input class="flex-30" label="Name" value=name onChange=(action (mut name))}}
+    {{o-input class="flex-30" label="E-mail" type="email" value=email onChange=(action (mut email))}}
+    {{o-input class="flex-40" label="Password" type="password" value=password onChange=(action (mut password))}}
   </div>
   <div class="layout layout-sm-column">
-    {{paper-input class="flex" label="Submission date" type="date" value=date onChange=(action (mut date))}}
-    {{paper-input class="flex" label="Company (disabled)" type="text" value="Google" disabled=true onChange=(action (mut foo))}}
+    {{o-input class="flex" label="Submission date" type="date" value=date onChange=(action (mut date))}}
+    {{o-input class="flex" label="Company (disabled)" type="text" value="Google" disabled=true onChange=(action (mut foo))}}
   </div>
 
-  {{paper-input textarea=true block=true label="Biography" maxlength=150 passThru=(hash rows=5 maxRows=5)
+  {{o-input textarea=true block=true label="Biography" maxlength=150 passThru=(hash rows=5 maxRows=5)
     value=biography onChange=(action (mut biography))}}
   <p>Name: {{name}}</p>
   <p>Email: {{email}}</p>
 
   <h3>Input Errors</h3>
   <p>
-    {{paper-input
+    {{o-input
       label="Address"
       value=address
       onChange=(action (mut address))
@@ -28,7 +28,7 @@
         required="Address is required."
       )
     }}
-    {{paper-input
+    {{o-input
       type="number"
       label="Maximum Value"
       value=maxNumber
@@ -38,7 +38,7 @@
         max="Enter 5 or less."
       )
     }}
-    {{paper-input
+    {{o-input
       type="number"
       label="Minimum Value"
       value=minNumber
@@ -48,7 +48,7 @@
         min="Enter at least 1."
       )
     }}
-    {{paper-input
+    {{o-input
       label="Maximum Character Length"
       value=maxLength
       onChange=(action (mut maxLength))
@@ -58,7 +58,7 @@
         maxlength="Maximum length exceeded."
       )
     }}
-    {{paper-input
+    {{o-input
       label="All Constraints"
       value=allConstraints
       onChange=(action (mut allConstraints))
@@ -70,7 +70,7 @@
         maxlength="Max length exceeded."
       )
     }}
-    {{paper-input
+    {{o-input
       label="Required asterisk only"
       value=requiredStyle
       onChange=(action (mut requiredStyle))
@@ -80,11 +80,11 @@
 
   <h3>Icons</h3>
   <p>
-    {{paper-input label="Name" value=name onChange=(action (mut name)) icon="person"}}
-    {{paper-input placeholder="Phone Number" type="text" value=user.phone onChange=(action (mut user.phone)) icon="phone"}}
-    {{paper-input label="Email (no messages)" type="email" value=user.email onChange=(action (mut user.email)) icon="email" required=true hideAllMessages=true}}
-    {{paper-input placeholder="Address" type="text" value=user.address onChange=(action (mut user.address)) icon="place"}}
-    {{paper-input label="Name on right" type="text" value=name2 onChange=(action (mut name2)) iconRight="person"}}
+    {{o-input label="Name" value=name onChange=(action (mut name)) icon="person"}}
+    {{o-input placeholder="Phone Number" type="text" value=user.phone onChange=(action (mut user.phone)) icon="phone"}}
+    {{o-input label="Email (no messages)" type="email" value=user.email onChange=(action (mut user.email)) icon="email" required=true hideAllMessages=true}}
+    {{o-input placeholder="Address" type="text" value=user.address onChange=(action (mut user.address)) icon="place"}}
+    {{o-input label="Name on right" type="text" value=name2 onChange=(action (mut name2)) iconRight="person"}}
   </p>
   {{! END-SNIPPET }}
 
@@ -103,13 +103,13 @@
 
   <h2>Input Attributes</h2>
   <p>
-    These additional attributes will be passed through to the input helper inside of paper-input.
+    These additional attributes will be passed through to the input helper inside of o-input.
     See the Ember <a href="http://guides.emberjs.com/v2.0.0/templates/input-helpers/">Input Helpers</a> for more information.
     This is an example of using one of the attributes.
   </p>
   <p>
     {{! BEGIN-SNIPPET input.attributes }}
-    {{paper-input
+    {{o-input
       value=numberTest
       onChange=(action (mut numberTest))
       label="Number of bagels"
@@ -173,7 +173,7 @@
   </p>
   <p>
     {{! BEGIN-SNIPPET input.actions }}
-    {{paper-input
+    {{o-input
       label="Event demonstration"
       value=eventTest
       onChange=(action (mut eventTest))
@@ -188,7 +188,7 @@
     {{code-snippet name="input.actions.hbs"}}
   </p>
 
-  {{#paper-api
+  {{#o-api
     (p-section
       (p-row "charCount" "integer" "Length of the current input's value.")
       (p-row "isInvalid" "boolean" "`true` if input is in error.")
@@ -200,11 +200,11 @@
     )
       title="Input Text Helpers"
   }}
-    <p>You can pass in a helper text to the paper-input's block. Some useful properties are yieled to the block to help you
+    <p>You can pass in a helper text to the o-input's block. Some useful properties are yieled to the block to help you
     conditionally render the text.</p>
     <div>
     {{! BEGIN-SNIPPET input.textHelper }}
-    {{#paper-input
+    {{#o-input
       value=emailValue
       onChange=(action (mut emailValue))
       label="Email"
@@ -212,13 +212,13 @@
         {{#unless input.hasValue}}
           <div class="hint">How can we reach you?</div>
         {{/unless}}
-      {{/paper-input}}
+      {{/o-input}}
       {{! END-SNIPPET }}
       {{code-snippet name="input.textHelper.hbs"}}
     </div>
-    {{/paper-api}}
+    {{/o-api}}
 
-  {{#paper-api validationApi title="Custom Validations"}}
+  {{#o-api validationApi title="Custom Validations"}}
     <p>
       In addition to <code>required</code>,
       <code>min</code>, <code>max</code>,
@@ -228,14 +228,14 @@
       <code>validate</code>. You may bind a single validation
       object, or an array of validation objects.
     </p>
-  {{/paper-api}}
+  {{/o-api}}
 
   <p>
     Here is an example of validating the input value matches typical email formats.
   </p>
   <p>
     {{! BEGIN-SNIPPET input.custom-validations }}
-    {{paper-input label="E-mail" type="email" value=customemail onChange=(action (mut customemail)) customValidations=emailValidation}}
+    {{o-input label="E-mail" type="email" value=customemail onChange=(action (mut customemail)) customValidations=emailValidation}}
     {{! END-SNIPPET }}
   </p>
 
@@ -250,7 +250,7 @@
   </p>
   <p>
     {{! BEGIN-SNIPPET input.multiple-constraints }}
-    {{paper-input class="md-block" label="Value should be even and equal 4." type="email" value=customMultiple onChange=(action (mut customMultiple)) customValidations=multipleConstraints}}
+    {{o-input class="md-block" label="Value should be even and equal 4." type="email" value=customMultiple onChange=(action (mut customMultiple)) customValidations=multipleConstraints}}
     {{! END-SNIPPET }}
   </p>
   {{code-snippet name="input.multiple-constraints.hbs"}}
@@ -258,19 +258,19 @@
 
   <h2>Setting validation messages from external validations</h2>
   <p>
-    While <code>\{{paper-input}}</code> supplies four
+    While <code>\{{o-input}}</code> supplies four
     built-in validation rules and the ability to specify programmed custom
     validations, some projects need more complicated and elaborate validations,
     such as are provided by <code>ember-cp-validations</code> or another validation add-on.
     In this case, the code to validate the user input is outside of
-    <code>paper-input</code>, and only the resulting messages need be provided to the
-    <code>\{{paper-input}}</code> helper.
+    <code>o-input</code>, and only the resulting messages need be provided to the
+    <code>\{{o-input}}</code> helper.
   </p>
   {{! BEGIN-SNIPPET input.external-validations }}
-  {{#paper-card as |card|}}
+  {{#o-card as |card|}}
     {{#card.content}}
       <div class="layout layout-sm-row">
-        {{paper-input
+        {{o-input
           class="flex-50"
           label="User name"
           value=model.username
@@ -279,7 +279,7 @@
         }}
       </div>
       <div class="layout layout-sm-row">
-        {{paper-input
+        {{o-input
           label="Password"
           class="flex-34"
           type="password"
@@ -287,7 +287,7 @@
           onChange=(action (mut model.password))
           errors=model.validations.attrs.password.messages
         }}
-        {{paper-input
+        {{o-input
           label="E-mail"
           class="flex-33"
           type="email"
@@ -295,7 +295,7 @@
           onChange=(action (mut model.email))
           errors=model.validations.attrs.email.messages
         }}
-        {{paper-input
+        {{o-input
           label="Retype your e-mail"
           class="flex-33"
           type="email"
@@ -305,7 +305,7 @@
         }}
       </div>
     {{/card.content}}
-  {{/paper-card}}
+  {{/o-card}}
   {{! END-SNIPPET }}
 
   <h3>Template</h3>

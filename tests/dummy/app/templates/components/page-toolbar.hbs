@@ -1,20 +1,20 @@
-{{#paper-toolbar class="md-whiteframe-1dp page-main-toolbar" as |toolbar|}}
+{{#o-toolbar class="md-whiteframe-1dp page-main-toolbar" as |toolbar|}}
   {{#toolbar.tools}}
-    {{#paper-sidenav-toggle as |toggleAction|}}
-      {{#paper-button class="hide-gt-sm" onClick=(action toggleAction) iconButton=true}}
-        {{paper-icon "menu"}}
-      {{/paper-button}}
-    {{/paper-sidenav-toggle}}
+    {{#o-sidenav-toggle as |toggleAction|}}
+      {{#o-button class="hide-gt-sm" onClick=(action toggleAction) iconButton=true}}
+        {{o-icon "menu"}}
+      {{/o-button}}
+    {{/o-sidenav-toggle}}
     <h2>
       {{#if isDemo}}
-        Components {{paper-icon "chevron-right"}}
+        Components {{o-icon "chevron-right"}}
       {{else if isLayout}}
-        Layout {{paper-icon "chevron-right"}}
+        Layout {{o-icon "chevron-right"}}
       {{/if}}
       {{pageTitle}}
       {{#if isWIP}}
-        {{paper-icon "warning" title="Not updated yet."}}
+        {{o-icon "warning" title="Not updated yet."}}
       {{/if}}
     </h2>
   {{/toolbar.tools}}
-{{/paper-toolbar}}
+{{/o-toolbar}}

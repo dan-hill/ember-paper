@@ -1,0 +1,6 @@
+import ContentComponent from 'ember-basic-dropdown/components/basic-dropdown/content';
+import layout from '../templates/components/o-autocomplete-content';
+
+export default ContentComponent.extend({
+  layout
+});

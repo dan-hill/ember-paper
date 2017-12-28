@@ -3,41 +3,41 @@
 {{#doc-content}}
   {{! BEGIN-SNIPPET buttons.example }}
   <div class="layout-row">
-    {{#paper-button onClick=(action "flatButton")}}Button with action{{/paper-button}}
-    {{#paper-button noink=true primary=true}}Primary (noink){{/paper-button}}
-    {{#paper-button disabled=true}}disabled{{/paper-button}}
-    {{#paper-button warn=true}}warn{{/paper-button}}
-    {{#paper-button href="http://emberjs.com/images/tomsters/original.png" target="_blank"}}href link{{/paper-button}}
+    {{#o-button onClick=(action "flatButton")}}Button with action{{/o-button}}
+    {{#o-button noink=true primary=true}}Primary (noink){{/o-button}}
+    {{#o-button disabled=true}}disabled{{/o-button}}
+    {{#o-button warn=true}}warn{{/o-button}}
+    {{#o-button href="http://emberjs.com/images/tomsters/original.png" target="_blank"}}href link{{/o-button}}
   </div>
   <p>
-    {{#paper-button raised=true onClick=(action "raisedButton")}}Button with action{{/paper-button}}
-    {{#paper-button raised=true primary=true}}Primary{{/paper-button}}
-    {{#paper-button raised=true disabled=true}}disabled{{/paper-button}}
-    {{#paper-button raised=true warn=true}}warn{{/paper-button}}
+    {{#o-button raised=true onClick=(action "raisedButton")}}Button with action{{/o-button}}
+    {{#o-button raised=true primary=true}}Primary{{/o-button}}
+    {{#o-button raised=true disabled=true}}disabled{{/o-button}}
+    {{#o-button raised=true warn=true}}warn{{/o-button}}
   </p>
   {{#custom-button}}
   <p>
-    {{#paper-button raised=true onClick=(action "targetButton")}}Button with target{{/paper-button}}
-    {{#paper-button raised=true primary=true onClick=(action "targetButton")}}Button with bubble{{/paper-button}}
-    {{#paper-button raised=true primary=true onClick=(action "targetButton") bubbles=false}}Button no bubble{{/paper-button}}
+    {{#o-button raised=true onClick=(action "targetButton")}}Button with target{{/o-button}}
+    {{#o-button raised=true primary=true onClick=(action "targetButton")}}Button with bubble{{/o-button}}
+    {{#o-button raised=true primary=true onClick=(action "targetButton") bubbles=false}}Button no bubble{{/o-button}}
   </p>
   <p>
-    {{#paper-button raised=true fab=true}}Fab{{/paper-button}}
-    {{#paper-button raised=true mini=true}}Mini{{/paper-button}}
-    {{#paper-button iconButton=true}}{{paper-icon "accessibility"}}{{/paper-button}}
+    {{#o-button raised=true fab=true}}Fab{{/o-button}}
+    {{#o-button raised=true mini=true}}Mini{{/o-button}}
+    {{#o-button iconButton=true}}{{o-icon "accessibility"}}{{/o-button}}
   </p>
   {{/custom-button}}
   <p>
-    {{paper-button raised=true label="Blockless version"}}
+    {{o-button raised=true label="Blockless version"}}
   </p>
   {{! END-SNIPPET }}
   <h3>Template</h3>
   {{code-snippet name="buttons.example.hbs"}}
-  
+
   <h3>Controller</h3>
   {{code-snippet name="buttons.component.js"}}
 
-  {{paper-api
+  {{o-api
     (p-section
       (p-row "onClick" "closure" "Action sent when the button is clicked.")
       (p-row "type" "string" 'Sets the html5 `type` attribute. Defaults to `"button"`, except for `<a>` link buttons.')

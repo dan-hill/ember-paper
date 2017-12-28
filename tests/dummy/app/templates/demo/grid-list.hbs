@@ -3,9 +3,9 @@
 {{#doc-content}}
   <h2>Basic Usage</h2>
   {{! BEGIN-SNIPPET grid-list.basic-usage }}
-  {{#paper-content class="md-whiteframe-z1 grid-list-demo1"}}
+  {{#o-content class="md-whiteframe-z1 grid-list-demo1"}}
 
-    {{#paper-grid-list
+    {{#o-grid-list
       cols="1 md-2 gt-md-6"
       rowHeight="gt-md-1:1 2:2"
       gutter="12px gt-sm-8px" as |grid|}}
@@ -46,9 +46,9 @@
         {{/tile.footer}}
       {{/grid.tile}}
 
-    {{/paper-grid-list}}
+    {{/o-grid-list}}
 
-  {{/paper-content}}
+  {{/o-content}}
   {{ END-SNIPPET }}
 
   <h3>Template</h3>
@@ -56,8 +56,8 @@
 
   <h2>Dynamic Tiles</h2>
   {{! BEGIN-SNIPPET grid-list.dynamic-tiles }}
-  {{#paper-content class="md-whiteframe-z1 grid-list-demo-dynamicTiles"}}
-    {{#paper-grid-list
+  {{#o-content class="md-whiteframe-z1 grid-list-demo-dynamicTiles"}}
+    {{#o-grid-list
       cols="sm-2 md-4 gt-md-6"
       rowHeight="4:3 gt-md-1:1"
       gutter="8px gt-sm-4px" as |grid|}}
@@ -71,8 +71,8 @@
         {{/grid.tile}}
       {{/each}}
 
-    {{/paper-grid-list}}
-  {{/paper-content}}
+    {{/o-grid-list}}
+  {{/o-content}}
   {{! END-SNIPPET }}
 
   <h3>Template</h3>
@@ -80,9 +80,9 @@
 
   <h2>Responsive and Animated Usage</h2>
   {{! BEGIN-SNIPPET grid-list.responsive }}
-  {{#paper-content class="md-whiteframe-z1 grid-list-demo-responsiveTiles" layout-padding=''}}
+  {{#o-content class="md-whiteframe-z1 grid-list-demo-responsiveTiles" layout-padding=''}}
 
-    {{#paper-grid-list
+    {{#o-grid-list
       cols="3 md-8 gt-md-12"
       rowHeight="4:3 gt-md-1:1"
       gutter="4px md-8px gt-md-16px" as |grid|}}
@@ -93,8 +93,8 @@
         {{/grid.tile}}
 
       {{/each}}
-    {{/paper-grid-list}}
-  {{/paper-content}}
+    {{/o-grid-list}}
+  {{/o-content}}
   {{! END-SNIPPET }}
 
   <h3>Template</h3>

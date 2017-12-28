@@ -8,7 +8,7 @@ export default Controller.extend({
   toastText: 'Hello world',
   toastClass: '',
 
-  paperToaster: service(),
+  oToaster: service(),
 
   actions: {
     /* Toast */
@@ -20,14 +20,14 @@ export default Controller.extend({
     },
     // BEGIN-SNIPPET toaster
     openServiceToast() {
-      this.get('paperToaster').show(this.get('toastText'), {
+      this.get('oToaster').show(this.get('toastText'), {
         duration: 4000,
         toastClass: this.get('toastClass')
       });
     },
 
     openServiceActionToast() {
-      this.get('paperToaster').show(this.get('toastText'), {
+      this.get('oToaster').show(this.get('toastText'), {
         duration: 4000,
         toastClass: this.get('toastClass'),
         action: {
@@ -41,7 +41,7 @@ export default Controller.extend({
     },
     // END-SNIPPET
     cancelToast(toast) {
-      this.get('paperToaster').cancelToast(toast);
+      this.get('oToaster').cancelToast(toast);
     },
     closeToast() {
       this.set('showToast', false);

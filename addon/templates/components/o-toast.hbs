@@ -1,0 +1,7 @@
+{{#ember-wormhole to=destinationId}}
+  {{#o-toast-inner swipe=swipeAction swipeToClose=swipeToClose onClose=onClose top=top left=left capsule=capsule class=class}}
+    {{yield (hash
+      text=(component "o-toast-text")
+    )}}
+  {{/o-toast-inner}}
+{{/ember-wormhole}}

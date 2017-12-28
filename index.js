@@ -56,8 +56,8 @@ module.exports = {
         config._emberPaperContentForInvoked = true;
         response = `
           ${response || ''}
-          <div id="paper-wormhole"></div>
-          <div id="paper-toast-fab-wormhole"></div>
+          <div id="o-wormhole"></div>
+          <div id="o-toast-fab-wormhole"></div>
         `;
       }
       return response;

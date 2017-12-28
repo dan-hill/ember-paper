@@ -15,9 +15,9 @@ Many ember-paper contributors hang out on the [e-paper channel on slack](https:/
 
 * **Encapsulation.** When communicating with a private ember-paper component, bind as many properties as are needed.
 When communicating between two public ember components, use `nearestOfType` in a computed property to find the outer component (for pre 2.3 compatibility), and override it when yielding a contextual component.
-For example, `ember-paper-inner` is a private component:
+For example, `ember-o-inner` is a private component:
 ```hbs
-{{paper-dialog-inner fullscreen=fullscreen onOutsideClick=onOutsideClick}}
+{{o-dialog-inner fullscreen=fullscreen onOutsideClick=onOutsideClick}}
 ```
 
 * **Capitalization and naming**
@@ -30,7 +30,7 @@ For example, `ember-paper-inner` is a private component:
  * Use SHOUTING_SNAKE_CASE for constants. `const NUMBER_OF_THINGIES = 10;`.
 
  * As required by Ember, component names, module names, and file names should continue to be kebab-cased, such as
-`{{paper-input}}` and the filepath `ember-paper/addon/components/paper-input.js`.
+`{{o-input}}` and the filepath `ember-paper/addon/components/o-input.js`.
 
 * **Optional template attributes**
 
@@ -45,7 +45,7 @@ This makes the usage clear to both future maintainers and developer-users who ma
 
 * **Stylesheets.** Use the Angular Material stylesheets as-is. Replicate Angular markup in `ember-paper`.
 
-* **Naming.** Use an ember-paper name for components in the form `{{paper-*}}`.
+* **Naming.** Use an ember-paper name for components in the form `{{o-*}}`.
 
 * **Attributes.** Convert angular element attributes (if they apply to your implementation) by removing the `md-*` suffix and camelCasing it like every other property:
 ```javascript
@@ -53,10 +53,10 @@ This makes the usage clear to both future maintainers and developer-users who ma
 ```
 becomes
 ```javascript
-{{paper-tabs dynamicHeight=true borderBottom=true someProperty="20"}}
+{{o-tabs dynamicHeight=true borderBottom=true someProperty="20"}}
 ```
 * **Angle bracket elements.** Any *user* markup that would require the use of an angle bracket component, such as
-`<md-some-element>` should be implemented as an ember component, such as `{{paper-some-element}}`.
+`<md-some-element>` should be implemented as an ember component, such as `{{o-some-element}}`.
 
 * **Features.** Seek to provide feature parity using Angular Material styles, but implemented in an Ember-centric way.
 

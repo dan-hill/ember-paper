@@ -9,7 +9,7 @@
     without a parameter.
   </p>
 
-  {{paper-api
+  {{o-api
     (p-section
       (p-row "layout-row" "Items arranged horizontally. `max-height = 100%` and `max-width` is the width of the items in the container.")
       (p-row "layout-column" "Items arranged vertically. `max-width = 100%` and `max-height` is the height of the items in the container.")
@@ -17,7 +17,7 @@
     header=(p-row "Class" "Effect")
   }}
 
-  {{#paper-card as |card|}}
+  {{#o-card as |card|}}
     <div class="example example-1 layout-row">
     {{! BEGIN-SNIPPET layout-containers.example1 }}
       <div class="layout-row flex">
@@ -33,7 +33,7 @@
     {{#card.content}}
       {{code-snippet name="layout-containers.example1.hbs"}}
     {{/card.content}}
-  {{/paper-card}}
+  {{/o-card}}
 
   <p>
     Note that <code>layout</code> only affects the flow direction for that container's immediate children.
@@ -50,7 +50,7 @@
     <code>layout</code> classes to set the layout direction for devices with view widths:
   </p>
 
-  {{paper-api
+  {{o-api
     (p-section
       (p-row "layout" "Sets the default layout direction unless overriden by another breakpoint.")
       (p-row "layout-xs" "width < *600*px")
@@ -73,7 +73,7 @@
     it will reset to <code>row</code> for <code>gt-sm</code> view sizes.
   </p>
 
-  {{#paper-card as |card|}}
+  {{#o-card as |card|}}
     <div class="example example-2">
     {{! BEGIN-SNIPPET layout-containers.example2 }}
       <div class="layout-row layout-xs-column">
@@ -85,6 +85,6 @@
     {{#card.content}}
       {{code-snippet name="layout-containers.example2.hbs"}}
     {{/card.content}}
-  {{/paper-card}}
+  {{/o-card}}
 
 {{/doc-content}}

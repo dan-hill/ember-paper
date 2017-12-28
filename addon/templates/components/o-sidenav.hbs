@@ -1,0 +1,17 @@
+{{#unless closed}}
+  {{o-backdrop
+    opaque=true
+    class="md-sidenav-backdrop"
+    onClick=(action "onBackdropTap")}}
+{{/unless}}
+
+{{#o-sidenav-inner
+  class=class
+  name=name
+  position=position
+  lockedOpen=lockedOpen
+  closed=closed
+  closeOnClick=closeOnClick
+  onToggle=(action "onToggle")}}
+  {{yield}}
+{{/o-sidenav-inner}}

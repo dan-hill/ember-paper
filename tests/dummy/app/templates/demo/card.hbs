@@ -5,7 +5,7 @@
   {{! BEGIN-SNIPPET card.basic-usage }}
   <div class="layout-row layout-xs-column">
     <div class="layout-column flex-xs flex-gt-xs-50">
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
             {{#text.headline}}Card with image{{/text.headline}}
@@ -14,12 +14,12 @@
           {{title.media size="lg" src="tomster.png" alt="Tomster" title="Tomster"}}
         {{/card.title}}
         {{#card.actions}}
-          {{#paper-button}}Action 1{{/paper-button}}
-          {{#paper-button}}Action 2{{/paper-button}}
+          {{#o-button}}Action 1{{/o-button}}
+          {{#o-button}}Action 2{{/o-button}}
         {{/card.actions}}
-      {{/paper-card}}
+      {{/o-card}}
 
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
             {{#text.headline}}Card with block{{/text.headline}}
@@ -31,15 +31,15 @@
             <div class="card-media"></div>
           {{/card.media}}
           {{#card.actions class="layout-column"}}
-            {{#paper-button iconButton=true}}{{paper-icon "favorite"}}{{/paper-button}}
-            {{#paper-button iconButton=true}}{{paper-icon "settings"}}{{/paper-button}}
-            {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
+            {{#o-button iconButton=true}}{{o-icon "favorite"}}{{/o-button}}
+            {{#o-button iconButton=true}}{{o-icon "settings"}}{{/o-button}}
+            {{#o-button iconButton=true}}{{o-icon "share"}}{{/o-button}}
           {{/card.actions}}
         {{/card.content}}
-      {{/paper-card}}
+      {{/o-card}}
     </div>
     <div class="layout-column flex-xs flex-gt-xs-50">
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
             {{#text.headline}}Card with image{{/text.headline}}
@@ -48,12 +48,12 @@
           {{title.media size="sm" src="tomster.png" alt="Tomster" title="Tomster"}}
         {{/card.title}}
         {{#card.actions}}
-          {{#paper-button}}Action 1{{/paper-button}}
-          {{#paper-button}}Action 2{{/paper-button}}
+          {{#o-button}}Action 1{{/o-button}}
+          {{#o-button}}Action 2{{/o-button}}
         {{/card.actions}}
-      {{/paper-card}}
+      {{/o-card}}
 
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
             {{#text.headline}}Card with block{{/text.headline}}
@@ -64,10 +64,10 @@
           {{/title.media}}
         {{/card.title}}
         {{#card.actions}}
-          {{#paper-button}}Action 1{{/paper-button}}
-          {{#paper-button}}Action 2{{/paper-button}}
+          {{#o-button}}Action 1{{/o-button}}
+          {{#o-button}}Action 2{{/o-button}}
         {{/card.actions}}
-      {{/paper-card}}
+      {{/o-card}}
     </div>
   </div>
   {{! END-SNIPPET }}
@@ -79,7 +79,7 @@
   {{! BEGIN-SNIPPET card.action-buttons }}
   <div class="layout-row layout-xs-column">
     <div class="layout-column flex-xs flex-gt-xs-50">
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{card.image src="washedout.png" alt="Washed Out" title="Washed Out"}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
@@ -101,12 +101,12 @@
           </p>
         {{/card.content}}
         {{#card.actions}}
-          {{#paper-button}}Action 1{{/paper-button}}
-          {{#paper-button}}Action 2{{/paper-button}}
+          {{#o-button}}Action 1{{/o-button}}
+          {{#o-button}}Action 2{{/o-button}}
         {{/card.actions}}
-      {{/paper-card}}
+      {{/o-card}}
 
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{card.image src="washedout.png" alt="Washed Out" title="Washed Out"}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
@@ -120,14 +120,14 @@
           </p>
         {{/card.content}}
         {{#card.actions class="layout-column"}}
-          {{#paper-button}}Action 1{{/paper-button}}
-          {{#paper-button}}Action 2{{/paper-button}}
+          {{#o-button}}Action 1{{/o-button}}
+          {{#o-button}}Action 2{{/o-button}}
         {{/card.actions}}
-      {{/paper-card}}
+      {{/o-card}}
     </div>
 
     <div class="layout-column flex-xs flex-gt-xs-50">
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{card.image src="washedout.png" alt="Washed Out" title="Washed Out"}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
@@ -141,22 +141,22 @@
           </p>
         {{/card.content}}
         {{#card.actions}}
-          {{#paper-button iconButton=true}}{{paper-icon "favorite"}}{{/paper-button}}
-          {{#paper-button iconButton=true}}{{paper-icon "settings"}}{{/paper-button}}
-          {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
+          {{#o-button iconButton=true}}{{o-icon "favorite"}}{{/o-button}}
+          {{#o-button iconButton=true}}{{o-icon "settings"}}{{/o-button}}
+          {{#o-button iconButton=true}}{{o-icon "share"}}{{/o-button}}
         {{/card.actions}}
-      {{/paper-card}}
+      {{/o-card}}
 
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{card.image src="washedout.png" alt="Washed Out" title="Washed Out"}}
         {{#card.actions}}
-          {{#paper-button iconButton=true}}{{paper-icon "favorite"}}{{/paper-button}}
-          {{#paper-button iconButton=true}}{{paper-icon "settings"}}{{/paper-button}}
-          {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
+          {{#o-button iconButton=true}}{{o-icon "favorite"}}{{/o-button}}
+          {{#o-button iconButton=true}}{{o-icon "settings"}}{{/o-button}}
+          {{#o-button iconButton=true}}{{o-icon "share"}}{{/o-button}}
         {{/card.actions}}
-      {{/paper-card}}
+      {{/o-card}}
 
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{#card.header as |header|}}
           {{#header.avatar}}
             <img src="tomster.png" alt="tomster" />
@@ -178,7 +178,7 @@
             two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
           </p>
         {{/card.content}}
-      {{/paper-card}}
+      {{/o-card}}
     </div>
   </div>
   {{! END-SNIPPET }}
@@ -190,7 +190,7 @@
   {{! BEGIN-SNIPPET card.in-card-actions }}
   <div class="layout-row layout-xs-column">
     <div class="layout-column flex-xs flex-gt-xs-50">
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{card.image src="washedout.png" alt="Washed Out" title="Washed Out"}}
         {{#card.title as |title|}}
           {{#title.text as |text|}}
@@ -199,11 +199,11 @@
         {{/card.title}}
         {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
           {{#actions.icons}}
-            {{#paper-button iconButton=true}}{{paper-icon 'favorite'}}{{/paper-button}}
-            {{#paper-button iconButton=true}}{{paper-icon 'share'}}{{/paper-button}}
+            {{#o-button iconButton=true}}{{o-icon 'favorite'}}{{/o-button}}
+            {{#o-button iconButton=true}}{{o-icon 'share'}}{{/o-button}}
           {{/actions.icons}}
-          {{#paper-button}}Action 1{{/paper-button}}
-          {{#paper-button}}Action 2{{/paper-button}}
+          {{#o-button}}Action 1{{/o-button}}
+          {{#o-button}}Action 2{{/o-button}}
         {{/card.actions}}
         {{#card.content}}
           <p>
@@ -211,9 +211,9 @@
             two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
           </p>
         {{/card.content}}
-      {{/paper-card}}
+      {{/o-card}}
 
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{#card.header as |header|}}
           {{#header.avatar}}
             <img src="tomster.png" alt="tomster" />
@@ -231,10 +231,10 @@
           {{/title.text}}
         {{/card.title}}
         {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
-          {{#paper-button}}Action 1{{/paper-button}}
-          {{#paper-button}}Action 2{{/paper-button}}
+          {{#o-button}}Action 1{{/o-button}}
+          {{#o-button}}Action 2{{/o-button}}
           {{#actions.icons}}
-            {{#paper-button iconButton=true}}{{paper-icon 'expand_less'}}{{/paper-button}}
+            {{#o-button iconButton=true}}{{o-icon 'expand_less'}}{{/o-button}}
           {{/actions.icons}}
         {{/card.actions}}
         {{#card.content}}
@@ -243,11 +243,11 @@
             two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
           </p>
         {{/card.content}}
-      {{/paper-card}}
+      {{/o-card}}
     </div>
 
     <div class="layout-column flex-xs flex-gt-xs-50">
-      {{#paper-card as |card|}}
+      {{#o-card as |card|}}
         {{#card.header as |header|}}
           {{#header.avatar}}
             <img src="tomster.png" alt="tomster" />
@@ -265,8 +265,8 @@
           {{/title.text}}
         {{/card.title}}
         {{#card.actions class="layout-row layout-align-start-center" as |actions|}}
-          {{#paper-button}}Action 1{{/paper-button}}
-          {{#paper-button}}Action 2{{/paper-button}}
+          {{#o-button}}Action 1{{/o-button}}
+          {{#o-button}}Action 2{{/o-button}}
         {{/card.actions}}
         {{#card.content}}
           <p>
@@ -274,7 +274,7 @@
             two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
           </p>
         {{/card.content}}
-      {{/paper-card}}
+      {{/o-card}}
     </div>
   </div>
   {{! END-SNIPPET }}

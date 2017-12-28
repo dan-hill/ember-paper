@@ -3,23 +3,23 @@
 {{#doc-content}}
   <p>
     {{! BEGIN-SNIPPET switch }}
-  {{#paper-switch value=booleanProp1 onChange=(action (mut booleanProp1))}}
+  {{#o-switch value=booleanProp1 onChange=(action (mut booleanProp1))}}
     {{booleanProp1}}
-  {{/paper-switch}}
+  {{/o-switch}}
 
-  {{#paper-switch value=booleanProp2 onChange=(action (mut booleanProp2))}}
+  {{#o-switch value=booleanProp2 onChange=(action (mut booleanProp2))}}
     {{booleanProp2}}
-  {{/paper-switch}}
+  {{/o-switch}}
 
-  {{#paper-switch value=booleanProp3 onChange=(action "changeBooleanProp" "3") disabled=true}}
+  {{#o-switch value=booleanProp3 onChange=(action "changeBooleanProp" "3") disabled=true}}
     Disabled switch
-  {{/paper-switch}}
+  {{/o-switch}}
 
-  {{#paper-switch value=booleanProp4 onChange=(action "changeBooleanProp" "4") noink=true}}
+  {{#o-switch value=booleanProp4 onChange=(action "changeBooleanProp" "4") noink=true}}
     Noink switch
-  {{/paper-switch}}
+  {{/o-switch}}
 
-  {{paper-switch label="Blockless version" value=booleanProp5 onChange=(action "changeBooleanProp" "5")}}
+  {{o-switch label="Blockless version" value=booleanProp5 onChange=(action "changeBooleanProp" "5")}}
     {{! END-SNIPPET }}
   </p>
   <h3>Template</h3>

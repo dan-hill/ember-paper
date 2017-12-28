@@ -1,0 +1,7 @@
+{{#if shouldRenderButton}}
+  {{#o-button onClick="handleClick" href=href target=target disabled=disabled}}
+    {{yield}}
+  {{/o-button}}
+{{else}}
+  {{yield}}
+{{/if}}

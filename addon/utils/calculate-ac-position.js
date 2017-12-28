@@ -112,7 +112,7 @@ export function calculateWormholedPosition(trigger, content, destination, { hori
   }
 
   /**
-  Custom paper-autocomplete positioning logic.
+  Custom o-autocomplete positioning logic.
 
   If there is enough room to position dropdown below the trigger,
   we need to use the inner input element for correct positioning.

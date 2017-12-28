@@ -5,7 +5,7 @@
 <div layout="row">
   {{! BEGIN-SNIPPET virtual-repeat.deferred }}
 
-    {{#paper-virtual-repeat deferredItems
+    {{#o-virtual-repeat deferredItems
       class="vertical-demo"
       height=292
       totalItemsCount=50000
@@ -17,7 +17,7 @@
           {{/deferred-content}}
         </div>
       {{/each}}
-    {{/paper-virtual-repeat}}
+    {{/o-virtual-repeat}}
 
   {{! END-SNIPPET }}
 </div>
@@ -30,14 +30,14 @@
 <div layout="row">
   {{! BEGIN-SNIPPET virtual-repeat.horizontal }}
 
-    {{#paper-virtual-repeat items
+    {{#o-virtual-repeat items
       class="horizontal-demo"
       horizontal=true as |visibleItems|
     }}
       {{#each visibleItems as |item|}}
         <div class="repeated-item-horiz">{{item}}</div>
       {{/each}}
-    {{/paper-virtual-repeat}}
+    {{/o-virtual-repeat}}
 
   {{! END-SNIPPET }}
 </div>
@@ -50,13 +50,13 @@
 <div layout="row">
   {{! BEGIN-SNIPPET virtual-repeat.infinite }}
 
-    {{#paper-virtual-repeat infiniteItems
+    {{#o-virtual-repeat infiniteItems
       class="vertical-demo"
       onScrollBottomed=(action 'fetchMore') as |visibleItems|}}
       {{#each visibleItems as |item|}}
         <div class="repeated-item">{{item}}</div>
       {{/each}}
-    {{/paper-virtual-repeat}}
+    {{/o-virtual-repeat}}
 
   {{! END-SNIPPET }}
 </div>
@@ -70,7 +70,7 @@
 <div layout="column">
   {{! BEGIN-SNIPPET virtual-repeat.scrollto }}
 
-    {{#paper-select
+    {{#o-select
       label="Year"
       class="flex-start"
       placeholder="Year"
@@ -78,15 +78,15 @@
       selected=(readonly selectedYear)
       onChange=(action 'scrollTo') as |year|}}
       {{year}}
-    {{/paper-select}}
-    {{#paper-virtual-repeat monthsWithYears
+    {{/o-select}}
+    {{#o-virtual-repeat monthsWithYears
       class="vertical-demo"
       scrollIndex=(readonly yearScrollIndex)
       scrollTop=true as |visibleItems|}}
       {{#each visibleItems as |item|}}
         <div class="repeated-item {{if item.header "header"}}">{{item.text}}</div>
       {{/each}}
-    {{/paper-virtual-repeat}}
+    {{/o-virtual-repeat}}
 
   {{! END-SNIPPET }}
 </div>
@@ -100,12 +100,12 @@
 <div layout="row">
   {{! BEGIN-SNIPPET virtual-repeat.vertical }}
 
-    {{#paper-virtual-repeat items
+    {{#o-virtual-repeat items
       class="vertical-demo" as |visibleItems|}}
       {{#each visibleItems as |item|}}
         <div class="repeated-item">{{item}}</div>
       {{/each}}
-    {{/paper-virtual-repeat}}
+    {{/o-virtual-repeat}}
 
   {{! END-SNIPPET }}
 </div>

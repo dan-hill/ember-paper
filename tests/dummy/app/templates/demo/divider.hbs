@@ -2,68 +2,68 @@
 
 {{#doc-content}}
 
-  {{#paper-card}}
-    {{#paper-toolbar}}
-      {{#paper-toolbar-tools}}
+  {{#o-card}}
+    {{#o-toolbar}}
+      {{#o-toolbar-tools}}
         <h2>Full Bleed</h2>
         <span class="flex"></span>
-        {{#paper-button onClick=(action "toggleSourceCodeFull") iconButton=true}}
-          {{paper-icon icon="code"}}
-        {{/paper-button}}
-      {{/paper-toolbar-tools}}
-    {{/paper-toolbar}}
-    {{#paper-content}}
+        {{#o-button onClick=(action "toggleSourceCodeFull") iconButton=true}}
+          {{o-icon icon="code"}}
+        {{/o-button}}
+      {{/o-toolbar-tools}}
+    {{/o-toolbar}}
+    {{#o-content}}
       <div class="doc-code-example {{if showSourceCodeFull 'is-visible'}}">
         {{code-snippet name="divider.full.hbs"}}
       </div>
       {{! BEGIN-SNIPPET divider.full }}
-      {{#paper-list}}
+      {{#o-list}}
         {{#each messages as |item|}}
-          {{#paper-item class="md-3-line"}}
+          {{#o-item class="md-3-line"}}
             <div class="md-list-item-text">
               <h3>{{item.what}}</h3>
               <h4>{{item.who}}</h4>
               <p>{{item.notes}}</p>
             </div>
-            {{paper-divider}}
-            {{#paper-button}}Respond{{/paper-button}}
-          {{/paper-item}}
+            {{o-divider}}
+            {{#o-button}}Respond{{/o-button}}
+          {{/o-item}}
         {{/each}}
-      {{/paper-list}}
+      {{/o-list}}
       {{! END-SNIPPET }}
-    {{/paper-content}}
+    {{/o-content}}
 
-  {{/paper-card}}
+  {{/o-card}}
 
-  {{#paper-card}}
-    {{#paper-toolbar}}
-      {{#paper-toolbar-tools}}
+  {{#o-card}}
+    {{#o-toolbar}}
+      {{#o-toolbar-tools}}
         <h2>Inset</h2>
         <span class="flex"></span>
-        {{#paper-button onClick=(action "toggleSourceCodeInset") iconButton=true}}
-          {{paper-icon icon="code"}}
-        {{/paper-button}}
-      {{/paper-toolbar-tools}}
-    {{/paper-toolbar}}
-    {{#paper-content}}
+        {{#o-button onClick=(action "toggleSourceCodeInset") iconButton=true}}
+          {{o-icon icon="code"}}
+        {{/o-button}}
+      {{/o-toolbar-tools}}
+    {{/o-toolbar}}
+    {{#o-content}}
       <div class="doc-code-example {{if showSourceCodeInset 'is-visible'}}">
         {{code-snippet name="divider.inset.hbs"}}
       </div>
       {{! BEGIN-SNIPPET divider.inset }}
-      {{#paper-list classNames="list-demo"}}
+      {{#o-list classNames="list-demo"}}
         {{#each messages as |item|}}
-          {{#paper-item class="md-3-line"}}
+          {{#o-item class="md-3-line"}}
             <img src="{{item.face}}?{{$index}}" class="face" alt="{{item.who}}">
             <div class="md-list-item-text">
               <h3>{{item.what}}</h3>
               <h4>{{item.who}}</h4>
               <p>{{item.notes}}</p>
             </div>
-            {{paper-divider inset=true}}
-          {{/paper-item}}
+            {{o-divider inset=true}}
+          {{/o-item}}
         {{/each}}
-      {{/paper-list}}
+      {{/o-list}}
       {{! END-SNIPPET }}
-    {{/paper-content}}
-  {{/paper-card}}
+    {{/o-content}}
+  {{/o-card}}
 {{/doc-content}}

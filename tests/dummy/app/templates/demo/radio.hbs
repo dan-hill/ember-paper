@@ -1,25 +1,25 @@
 {{page-toolbar pageTitle="Radio" isDemo=true}}
   {{#doc-content}}
-  {{#paper-card class="radio-button-demo"}}
-    {{#paper-card-content}}
+  {{#o-card class="radio-button-demo"}}
+    {{#o-card-content}}
       <h2>Basic Usage</h2>
       <p>
         Stand alone
       </p>
       <div class="layout-row layout-align-space-around">
         {{! BEGIN-SNIPPET radio.standalone-usage }}
-        {{#paper-radio toggle=true value="Toggable" groupValue=toggleValue
+        {{#o-radio toggle=true value="Toggable" groupValue=toggleValue
           onChange=(action (mut toggleValue))}}
           Toggable
-        {{/paper-radio}}
-        {{paper-radio label="Blockless"
+        {{/o-radio}}
+        {{o-radio label="Blockless"
           toggle=true
           value="Blockless"
           groupValue=blocklessValue
           onChange=(action (mut blocklessValue))}}
-        {{#paper-radio value=false disabled=true onChange=null}}
+        {{#o-radio value=false disabled=true onChange=null}}
           Disabled
-        {{/paper-radio}}
+        {{/o-radio}}
         {{! END-SNIPPET }}
       </div>
       <h3>Template</h3>
@@ -30,13 +30,13 @@
         Selected Value: <span class="radio-value">{{selectedFruit}}</span>
       </p>
       {{! BEGIN-SNIPPET radio.basic-group-usage}}
-      {{#paper-radio-group
+      {{#o-radio-group
         groupValue=(readonly selectedFruit)
         onChange=(action (mut selectedFruit)) as |group|}}
         {{#group.radio value="Apple" primary=true}} Apple {{/group.radio}}
         {{#group.radio value="Banana" warn=true}} Banana {{/group.radio}}
         {{#group.radio value="Mango"}} Mango {{/group.radio}}
-      {{/paper-radio-group}}
+      {{/o-radio-group}}
       {{! END-SNIPPET }}
 
       <h3>Template</h3>
@@ -50,7 +50,7 @@
         Selected Value: <span class="radio-value">{{selectedGraphic}}</span>
       </p>
       {{! BEGIN-SNIPPET radio.images }}
-      {{#paper-radio-group
+      {{#o-radio-group
         groupValue=selectedGraphic
         onChange=(action (mut selectedGraphic)) as |group|}}
         {{#group.radio value="graphic-1" primary=true}}
@@ -62,12 +62,12 @@
         {{#group.radio value="graphic-3"}}
           <img src="http://tinyurl.com/j55t8cd">
         {{/group.radio}}
-      {{/paper-radio-group}}
+      {{/o-radio-group}}
       {{! END-SNIPPET }}
 
       <h3>Template</h3>
       {{code-snippet name="radio.images.hbs"}}
 
-    {{/paper-card-content}}
-  {{/paper-card}}
+    {{/o-card-content}}
+  {{/o-card}}
 {{/doc-content}}

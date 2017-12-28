@@ -43,7 +43,7 @@ export default Controller.extend({
 
   /*
    * Array of static Objects.
-   * When having objects, use lookupKey="name" on the paper-autocomplete component so it knows to use "name" to search in.
+   * When having objects, use lookupKey="name" on the o-autocomplete component so it knows to use "name" to search in.
    */
   shorterItems: A([
     { name: 'Afghanistan', code: 'AF' },
